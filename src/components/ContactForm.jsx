@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa'
 import emailjs from "@emailjs/browser"
 import { BsPersonLinesFill } from 'react-icons/bs'
-import Resume from "../assets/Resume/Resume.pdf"
+import Resume from "../assets/Resume/RishabhBajpai.pdf"
 
 const ContactForm = () => {
     const [message, setMessage] = useState("")
@@ -34,7 +34,7 @@ const ContactForm = () => {
                         <a href="https://github.com/RishabhBajpai97" target='_blank' rel='noreferrer'><FaGithub color='white' size={30} /></a>
                         <a href="https://www.linkedin.com/in/rishabh-bajpai-b87454152" target='_blank' rel="noreferrer"><FaLinkedin className='text-[#2563EB]' size={30} /></a>
                         <a href="https://medium.com/@bajpai.rishabh1018" target='_blank' rel='noreferrer'><FaMedium className='text-gray-600' size={30} /></a>
-                        <a href={Resume} download="Resume.pdf" target='_blank' rel='noreferrer'><BsPersonLinesFill className='text-gray-300' size={30} /></a>
+                        <a href={Resume} download="RishabhBajpai.pdf" target='_blank' rel='noreferrer'><BsPersonLinesFill className='text-gray-300' size={30} /></a>
                     </div>
                 </div>
                 <input className='bg-[#ccd6f6] p-2' required type="text" name="name" placeholder="Name" />
