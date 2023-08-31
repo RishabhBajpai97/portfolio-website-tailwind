@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa"
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaTwitter, FaMedium } from "react-icons/fa"
 import { HiOutlineMail } from "react-icons/hi"
 import { BsPersonLinesFill } from "react-icons/bs"
 import { Link } from "react-scroll"
 import Logo from "../assets/logo.png"
+import Resume from "../assets/Resume/Resume.pdf"
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
@@ -12,7 +13,7 @@ const Navbar = () => {
     return (
         <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
             <div>
-                <img src={Logo} alt="Logo Image" style={{ width: "50px" }} />
+                <img src={Logo} alt="Logo Image" style={{ width: "80px" }} />
             </div>
             <div className='hidden md:flex'>
                 <ul className='flex'>
@@ -38,16 +39,20 @@ const Navbar = () => {
             <div className='hidden lg:flex flex-col fixed top-[35%] left-0'>
                 <ul>
                     <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600 '>
-                        <a className='flex justify-between items-center text-gray-300 w-full' href="/">LinkedIn <FaLinkedin size={30} /></a>
+                        <a className='flex justify-between items-center text-gray-300 w-full' href="https://www.linkedin.com/in/rishabh-bajpai-b87454152" target='_blank' rel="noreferrer">LinkedIn <FaLinkedin size={30} /></a>
                     </li>
                     <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333] '>
-                        <a className='flex justify-between items-center text-gray-300 w-full' href="/">Github <FaGithub size={30} /></a>
+                        <a className='flex justify-between items-center text-gray-300 w-full' href="https://github.com/RishabhBajpai97" target='_blank' rel='noreferrer'>Github <FaGithub size={30} /></a>
                     </li>
                     <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0] '>
-                        <a className='flex justify-between items-center text-gray-300 w-full' href="/">Email <HiOutlineMail size={30} /></a>
+                        <a className='flex justify-between items-center text-gray-300 w-full' href="mailto:bajpai.rishabh1018@gmail.com">Email <HiOutlineMail size={30} /></a>
                     </li>
                     <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69] '>
-                        <a className='flex justify-between items-center text-gray-300 w-full' href="/">Resume <BsPersonLinesFill size={30} /></a>
+                        <a className='flex justify-between items-center text-gray-300 w-full' href="https://medium.com/@bajpai.rishabh1018" target='_blank' rel='noreferrer'>Medium <FaMedium size={30} /></a>
+                    </li>
+
+                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#8892b0] '>
+                        <a className='flex justify-between items-center text-gray-300 w-full' href={Resume} download="Resume.pdf">Resume <BsPersonLinesFill size={30} /></a>
                     </li>
                 </ul>
             </div>
